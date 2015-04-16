@@ -8,6 +8,6 @@ To find old projects run `old_projects.sql` in Jira DB. In my file I am looking 
 
 Then run Python script `remove_projects.py` :
 
-"""
+```
 python remove_projects.py [-test|-live] <file-with-projects.txt>
-"""
+```
