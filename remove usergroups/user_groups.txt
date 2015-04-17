@@ -1,0 +1,9 @@
+| id    | group_name                               |
++-------+------------------------------------------+
+| 10148 | Test Group                               |
+| 10154 | ADVIS                                    |
+| 10146 | ALI                                      |
+| 10610 | ALIMT                                    |
+| 10101 | ATOSS                                    |
+| 10030 | Audits Project level 2                   |
+| 10098 | BAMS Project                             |
