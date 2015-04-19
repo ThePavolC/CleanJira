@@ -1,6 +1,16 @@
 # CleanJira
 Couple of scripts to remove stuff from Jira. By stuff I mean old projects, permission schemes and user groups.
 
+- `./sql`
+    - contains sql queries to get data for each script
+    - contains sample data output from DB. Scripts are expecting the same file format as is in sample data
+- `./src`
+    - each script is located here
+    - properties file`
+    - `./utils` contains some helper functions
+        - `files.py` handles file processing
+        - `run_check.py` checks if there are all needed arguments when running script
+
 # Remove projects
 
 Script removes projects specified in file. Script is used to remove old projects.

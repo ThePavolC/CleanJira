@@ -1,6 +1,7 @@
 class FileUtils(object):
 
     def _get_file_lines(self,filename):
+        """Reads file and returns each line in list"""
         file_lines = []
 
         with open(filename,'r') as opened_file:
@@ -10,7 +11,11 @@ class FileUtils(object):
         return file_lines
 
     def get_file_dic(self,filename):
+        """Creates dictionary from table data.
 
+        Name of column is key in dictionary and column data are
+        value in dictionary represented as list.
+        """
         file_lines = self._get_file_lines(filename)
 
         data = {}
@@ -59,6 +64,4 @@ class FileUtils(object):
             print ""
 
 if __name__ == "__main__":
-    utils = Utils()
-    ff = utils.get_file_dic("sample.txt")
-    utils.print_file_dic(ff)
+    pass
