@@ -41,8 +41,9 @@ def remove_schemes():
     for scheme_name in data['NAME']:
 
         try:
+            print ''
             print '%d/%d : %s' % (data['NAME'].index(scheme_name) + 1, total, scheme_name)
-            soap.deletePermissionScheme(auth,s)
+            soap.deletePermissionScheme(auth,scheme_name)
             print 'Scheme "%s" deleted' % scheme_name
         except Exception as e:
             print "ERROR: ",e
