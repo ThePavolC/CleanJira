@@ -4,7 +4,7 @@ def check_argv(argv):
     When executing, there must be argument switch for test/live.
     There also must be filename.
     Method returns set(is_correct, filename, is_test)
-    """``
+    """
     python_file_name = argv[0]
     usage_msg = "Usage: python %s [-test | -live] filename.txt" % python_file_name
     is_test = True
