@@ -51,21 +51,18 @@ def remove_usergroups():
             jira_group = soap.getGroup(auth,group_name)
             jira_group_name = jira_group.name
             jira_group_users = jira_group.users
-            num_users = len(users)
+            num_users = len(jira_group.users)
 
             if jira_group_name.startswith(keep_group):
                 print '* Will not be deleted: %s' % str(jira_group_name)
                 not_deleted_groups.append(jira_group_name)
             else:
-                #print "Delete group: '", str(g_name),"', users:",num_users
                 print ('Delete group "%s" with %d users.' %
-                    (str(jira_group_name), num_users))
+                    (jira_group_name, num_users))
 
-                #soap.deleteGroup(auth,g_name,'jira-users')
+                soap.deleteGroup(auth,jira_group_name,'jira-users')
 
-                print 'Group "%s" deleted.' % str(jira_group_name)
-
-                #print "Group: '", str(g_name),"' deleted"
+                print 'Group "%s" deleted.' % jira_group_name
         except Exception as e:
             print "ERROR: ",e
             print "ERROR with group:", group_name
